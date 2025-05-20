@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Identity Theft Simulation</title>
+
+  <link href="assets/import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/qstyle.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <!-- Same nav menu code from your home page -->
+  </header>
+
+  <main id="main">
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2><a href="index.html#simulations">Simulation</a></h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulation Content -->
+    <!-- Identity theft simulation -->
+    <div id="sim">
+
+      <!-- Initial phishing email -->
+      <section id="reputationalSimul">
+        <div id="question">
+          <div class="section-title">
+            <h2>A website asks you to login to view private messages. Do you enter your credentials?</h2>
+          </div>
+
+          <div id="buttons">
+            <button id="choice" class="choice" onclick="respond(true)">Yes</button>
+            <button id="choice" class="choice" onclick="respond(false)">No</button>
+          </div>
+        </div>
+
+        <!-- Yes response -->
+        <div id="yes" class="response" style="display:none">
+          <div class="section-title">
+            <h2>You entered your login details. The hacker leaks damaging private messages.</h2>
+          </div>
+        </div>
+
+        <!-- No response -->
+        <div id="no" class="response" style="display:none">
+          <div class="section-title">
+            <h2>You did not enter your credentials. Your private data remains secure.</h2>
+          </div>
+        </div>
+
+        <div id="preAnsImg" data-aos-delay="150">
+          <img src="assets/img/reputation/scenario-3.webp" class="img-fluid simulImg" />
+        </div>
+
+        <div id="postAnsImgY" data-aos-delay="150" style="display:none">
+          <img src="assets/img/reputation/blog-800x400-spear-phishing_1.jpg" class="img-fluid simulImg" />
+        </div>
+
+        <div id="postAnsImgN" data-aos-delay="150" style="display:none">
+          <img src="assets\img\identity\emailPostN.png" class="img-fluid simulImg" />
+        </div>
+      </section>
+    </div>
+    
+    <script src="assets/js/simul.js"></script>
+
+  </main>
+
+</body>
+
+</html>

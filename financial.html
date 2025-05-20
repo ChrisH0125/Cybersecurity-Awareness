@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Financial Loss Simulation</title>
+
+  <link href="assets/import/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/import/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/qstyle.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <!-- Same nav menu code from your home page -->
+  </header>
+
+  <main id="main">
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2><a href="index.html#simulations">Simulation</a></h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulation Content -->
+    <!-- Identity theft simulation -->
+    <div id="sim">
+
+      <!-- Initial phishing email -->
+      <section id="financialSimul">
+        <div id="question">
+          <div class="section-title">
+            <h2>You receive a message your bank account was hacked. Do you click the link to verify and secure your account?</h2>
+          </div>
+
+          <div id="buttons">
+            <button id="choice" class="choice" onclick="respond(true)">Yes</button>
+            <button id="choice" class="choice" onclick="respond(false)">No</button>
+          </div>
+        </div>
+
+        <!-- Yes response -->
+        <div id="yes" class="response" style="display:none">
+          <div class="section-title">
+            <h2>You clicked the link and entered your account password. The hacker drains your accounts.</h2>
+          </div>
+        </div>
+
+        <!-- No response -->
+        <div id="no" class="response" style="display:none">
+          <div class="section-title">
+            <h2>You did not click the link or provide any information. Your accounts remain secure.</h2>
+          </div>
+        </div>
+
+        <div id="preAnsImg" data-aos-delay="150">
+          <img src="assets/img/financial/PhishingTrustedBank.png" class="img-fluid simulImg" />
+        </div>
+
+        <div id="postAnsImgY" data-aos-delay="150" style="display:none">
+          <img src="assets/img/financial/istockphoto-1279316333-612x612.jpg" class="img-fluid simulImg" />
+        </div>
+
+        <div id="postAnsImgN" data-aos-delay="150" style="display:none">
+          <img src="assets\img\identity\emailPostN.png" class="img-fluid simulImg" />
+        </div>
+      </section>
+    </div>
+    
+    <script src="assets/js/simul.js"></script>
+
+  </main>
+
+</body>
+
+</html>
